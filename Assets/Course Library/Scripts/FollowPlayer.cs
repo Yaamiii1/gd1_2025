@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
@@ -11,10 +12,8 @@ public class FollowPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void LateUpdate()
     {
-        transform.position = player.transform.position +
-            offset;
-
+        transform.position = player.transform.position + offset;
     }
 }
